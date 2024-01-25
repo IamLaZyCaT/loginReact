@@ -14,11 +14,18 @@ const Navbar = () => {
   }
   return (
     <>
+    {/* navbar */}
        <div className="navbar">
+
+        {/* logo */}
         <div className="logo">
             <Link to="#"><img src={logo} alt="" /><span>AphroDash</span></Link>
         </div>
+        {/* logo end */}
+
+        {/* navigation list */}
         <ul className="nav-list">
+
           <div className="links" id='links'>
             <li><Link to="" className='link'>Home</Link></li>
             <li><Link to="" className='link'>About Us</Link></li>
@@ -29,16 +36,17 @@ const Navbar = () => {
             <li><Link to="" className='link2'><i class="fa-regular fa-user"></i></Link></li>
             <li><Link to="" className='link2'><i class="fa-solid fa-cart-shopping"></i></Link></li>
             </div>
-            
-            
         </ul>
-        
+        {/* navigation list end*/}
        </div>
+
+      {/* burger menu */}
        <div className="burger">
               <div type="button" id="burgermenu" onClick={myClick} >
                 <i class="fa-solid fa-bars"></i>
               </div>
         </div>
+        {/* burger menu end */}
     </>
   )
 }

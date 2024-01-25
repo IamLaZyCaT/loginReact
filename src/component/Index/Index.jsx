@@ -6,7 +6,9 @@ import './Index.scss';
 const Index = () => {
   return (
     <>
+    {/* navbar */}
         <Navbar/>
+        
         <div className="container">
 
             <img src={logo1} alt="logo1" />
