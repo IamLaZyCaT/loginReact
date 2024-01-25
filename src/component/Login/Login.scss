@@ -1,0 +1,501 @@
+@import '../../Style/style.scss';
+
+.log{
+    img{
+        height: 90vh;
+        width: 100%;
+        filter: brightness(80%);
+    }
+    .contain{
+        position: absolute;
+        top: 14vh;
+        left: 55vw;
+        border-radius: 20px;
+        background-color: white;
+        width: 605px;
+        .logo{
+            img{
+                width: 50px;
+                height: 50px;
+                margin: 0 100px;
+            }
+        }
+        .login{
+            background-color: #081D6A;
+            color: white;
+            width: 100%;
+            @include flexCenter();
+            padding: 5px 0;
+            font-size: 32px;
+        }
+        form{
+            @include flexCol();
+            label{
+               @include label();
+            }
+            .input{
+                @include inp();
+                width: 534px;
+                margin: 0 30px;
+            }
+            .input:focus{
+                outline: none;
+            }
+            .pass{
+                @include flexCol();
+                .error{
+                    width: 533px;
+                    height: 21px;
+                    background: #FB4E4E;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    margin: 5px 30px;
+                    color: white;
+                    padding: 0 0 0 5px;
+                    position: absolute;
+                    top: 300px;
+                    left: 0;
+                    display: none;
+                }
+            }
+            .forgot{
+                margin: 10px 30px;
+                @include flexSpace();
+                .remem{
+                    input{
+                        width: 14px;
+                        height: 14px;
+                        border: 0.5px solid #000;
+                    }
+                    label{
+                        color: #696262;
+                        font-size: 16px;
+                    }
+                }
+                label{
+                    color: #696262;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+            .btns{
+                @include flexSpace();
+                padding:0 30px;
+                .btn{
+                    cursor: pointer;
+                    width: 255px;
+                    height: 32px;
+                    border-radius: 10px;
+                    background: #FFF;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    @include flexCenter();
+                    input[type="checkbox"]{
+                        -webkit-appearance: none;
+                        appearance: none;
+                        height: 20px;
+                        width: 20px;
+                        background-color: #d5d5d5;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        @include flexCenter();
+                        &::after{
+                            content: '';
+                        font-family: "Font Awesome 5 free";
+                        font-weight: 900;
+                        color: white;
+                        }
+                    }
+                    input[type="checkbox"]:checked{
+                        background-color: #9747FF;
+                    }
+                    span{
+                        margin-left: 8px;
+                    }
+                    
+                }
+            }
+            .butt{
+                @include flexCenter();
+                flex-direction: column;
+                .button{
+                    width: 335px;
+                    height: 32px;
+                    border-radius: 10px;
+                    
+                }
+                #x{
+                    margin: 20px 0 0  0;
+                    background-color: #27397D;
+                    color: white;
+                    border: 1px solid #27397D;
+                    &:hover{
+                        color: #27397D;
+                        background-color: white;
+                        border: 1px solid #27397D;
+                    }
+                }
+                #y{
+                    margin: 20px 0;
+                    color: #27397D;
+                    background-color: white;
+                    border: 1px solid #27397D;
+                    &:hover{
+                        background-color: #27397D;
+                        color: white;
+                        border: 1px solid #27397D;
+                    }
+                }
+                .trouble{
+                    margin: 0 0 20px 0;
+                    .link{
+                        color: #27397D;
+                        text-decoration: none;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .waterMark{
+        position: absolute;
+        top: 500px;
+        left: 0;
+        color: white;
+        display: flex;
+        align-items: center;
+        img{
+            width: 193px;
+            height: 147px;
+        }
+        .detail{
+            .head{
+                font-size: 40px;
+
+            }
+        }
+       }
+}
+
+@media (max-width:1400px){
+    .log{
+        .contain{
+           
+            left: 50vw;
+            
+        }
+        .waterMark{
+            img{
+                width: 133px;
+                height: 107px;
+            }
+            .detail{
+                .head{
+                    font-size: 30px;
+                }
+                .body{
+                    width: 250px;
+                }
+            }
+           }
+    }
+}
+@media (max-width:1260px){
+    .log{
+        .contain{
+           
+            left: 40vw;
+            
+        }
+    }
+}
+@media (max-width:1048px){
+    .log{
+        .contain{
+           
+            left: 20vw;
+            
+        }
+        .waterMark{
+            position: absolute;
+            top: 670px;
+            left: 0;
+            color: white;
+            img{
+                width: 133px;
+                height: 107px;
+            }
+            .detail{
+                .head{
+                    font-size: 30px;
+                }
+                .body{
+                    width: 250px;
+                }
+            }
+           }
+    }
+}
+@media (max-width:831px){
+    .log{
+        .contain{
+           
+            left: 20vw;
+            
+        }
+        .waterMark{
+            display: none;
+           }
+    }
+}
+@media (max-width:810px){
+    .log{
+        .contain{
+           
+            left: 10vw;
+            
+        }
+    }
+}
+@media (max-width:745px){
+    .log{
+        .contain{
+           
+            left: 5vw;
+            
+        }
+    }
+}
+@media (max-width:670px){
+    .log{
+        .contain{
+           
+            left: 2vw;
+            
+        }
+    }
+}
+@media (max-width:634px){
+    .log{
+        .contain{
+            width: 600px;
+            .logo{
+                img{
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 80px;
+                }
+            }
+            .login{
+                font-size: 28px;
+            }
+            form{
+                .input{
+                    @include inp();
+                    width: 510px;
+                    margin: 0 10px;
+                }
+                .pass{
+                    @include flexCol();
+                    .error{
+                        width: 510px;
+                        height: 21px;       
+                    }
+                }
+                .forgot{
+                    margin: 10px 10px;
+                    @include flexSpace();
+                    .remem{
+                        input{
+                            width: 12px;
+                            height: 12px;
+                            border: 0.5px solid #000;
+                        }
+                        label{
+                            color: #696262;
+                            font-size: 14px;
+                        }
+                    }
+                    label{
+                        color: #696262;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+                .btns{
+                    @include flexSpace();
+                    padding:0 10px;
+                    .btn{
+                        cursor: pointer;
+                        width: 230px;
+                        height: 32px;
+                        
+                        input[type="checkbox"]{
+                            height: 10px;
+                            width: 10px;
+
+                        }
+                        
+                    }
+                }
+                .butt{
+                    @include flexCenter();
+                    flex-direction: column;
+                    .button{
+                        width: 305px;
+                        height: 32px;
+                        border-radius: 10px;
+                        
+                    }
+                    #x{
+                        margin: 10px 0 0  0;
+                    }
+                    #y{
+                        margin: 10px 0;
+                    }
+                    .trouble{
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:623px){
+    .log{
+        .contain{
+            width: 500px;
+            form{
+                .input{
+                    @include inp();
+                    width: 400px;
+                    margin: 0 20px;
+                }
+                .pass{
+                    @include flexCol();
+                    .error{
+                        width: 400px;
+                        height: 21px;       
+                    }
+                }
+                .btns{
+                    padding:0 20px;
+                    .btn{
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:530px){
+    .log{
+        .contain{
+            width: 400px;
+            form{
+                .input{
+                    width: 300px;
+                }
+                .pass{
+                    @include flexCol();
+                    .error{
+                        width: 300px;
+                    }
+                }
+                .forgot{
+                    .remem{
+                        label{
+                            color: #696262;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .btns{
+                    .btn{
+                        width: 200px;
+                        font-size: 12px;
+                    }
+                }
+                
+            }
+        }
+    }
+    @media (max-width:426px){
+        .log{
+           
+            .contain{
+                width: 350px;
+                .login{ 
+                    font-size: 24px;
+                }
+                form{
+                    label{
+                       font-size: 16px;
+                    }
+                    .input{
+                        width: 300px;
+                    }
+                    .pass{
+                        .error{
+                            width: 300px;
+                        }
+                    }
+                    .forgot{
+                       
+                        @include flexCol();
+                    }
+                    .btns{
+                        @include flexCol();
+                        .btn{
+                            margin-top: 10px;
+                        } 
+                        }
+                    }
+                    .butt{
+                        .button{
+                            width: 200px;
+                            height: 24px;                            
+                        }
+                       
+                        .trouble{
+                            margin: 0 0 20px 0;
+                            .link{
+                                color: #27397D;
+                                text-decoration: none;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        
+    }
+    @media (max-width:370px){
+        .log{
+           
+            .contain{
+                width: 300px;
+    
+                form{
+                   
+                    .input{
+                        width: 250px;
+                    }
+                    .pass{
+                        .error{
+                            width: 250px;
+                        }
+                    }
+                    }
+                    .butt{
+                        .button{
+                            width: 10px;
+                            height: 32px;
+                            border-radius: 10px;
+                            
+                        }
+                    }
+                }
+            }
+        
+    }
+}

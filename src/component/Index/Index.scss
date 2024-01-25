@@ -1,0 +1,125 @@
+@import '../../Style/style.scss';
+
+.container{
+    @include flexCenter();
+    background-color: #060466;
+    height: 90vh;
+    width: 100%;
+    color: white;
+    img{
+        width: 144px;
+    }
+    .detail{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        .welcome{
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .aprodash{
+            font-size: 84px;
+        }
+        .contain{
+            font-size: 28px;
+        }
+    }
+}
+
+@media (max-width:640px){
+    .container{
+        img{
+            width: 130px;
+        }
+        .detail{
+            .welcome{
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .aprodash{
+                font-size: 72px;
+            }
+            .contain{
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media (max-width:530px){
+    .container{
+        img{
+            width: 100px;
+        }
+        .detail{
+            .welcome{
+                font-size: 18px;
+                font-weight: 700;
+            }
+            .aprodash{
+                font-size: 70px;
+            }
+            .contain{
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media (max-width:490px){
+    .container{
+        img{
+            width: 100px;
+        }
+        .detail{
+            .welcome{
+                font-size: 16px;
+                font-weight: 700;
+            }
+            .aprodash{
+                font-size: 60px;
+            }
+            .contain{
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media (max-width:430px){
+    .container{
+        img{
+            width: 80px;
+        }
+        .detail{
+            .welcome{
+                font-size: 16px;
+                font-weight: 700;
+            }
+            .aprodash{
+                font-size: 50px;
+            }
+            .contain{
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media (max-width:380px){
+    .container{
+        img{
+            width: 60px;
+            margin: 0;
+        }
+        .detail{
+            .welcome{
+                font-size: 16px;
+                font-weight: 700;
+            }
+            .aprodash{
+                font-size: 30px;
+            }
+            .contain{
+                font-size: 16px;
+                width: 200px;
+            }
+        }
+    }
+}

@@ -1,0 +1,547 @@
+@import '../../Style/style.scss';
+
+.sign{
+    img{
+        height: 90vh;
+        width: 100%;
+        filter: brightness(80%);
+    }
+    .contain{
+        position: absolute;
+        top: 14vh;
+        left: 55vw;
+        width: 605px;
+        border-radius: 20px;
+        background-color: white;
+        .logo{
+            img{
+                width: 50px;
+                height: 50px;
+                margin: 0 100px;
+            }
+        }
+        .login{
+            background-color: #081D6A;
+            color: white;
+            width: 100%;
+            @include flexCenter();
+            padding: 5px 0;
+            font-size: 24px;
+        }
+        form{
+            @include flexCol();
+            .name{
+                margin: 20px 20px 0 20px;
+                @include flexSpace();
+                gap:14px;
+                .fName{
+                    input{
+                        width: 275px;
+                        @include inp();
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    .error{
+                        width: 275px;
+                        height: 21px;
+                        @include err();
+                        margin: 5px 30px;
+                        color: white;
+                        padding: 0 0 0 5px;
+                        position: absolute;
+                        top: 170px;
+                        left: -10px;
+                        display: none;
+                    }
+                }
+                .phone{
+                    input{
+                        width: 275px;
+                        @include inp();
+                        &:focus{
+                            outline: none;
+                        }
+                        
+                    }
+                    .error{
+                        width: 275px;
+                        height: 21px;
+                        background: #FB4E4E;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        margin: 5px 30px;
+                        color: white;
+                        padding: 0 0 0 5px;
+                        position: absolute;
+                        top: 170px;
+                        left: 278px;
+                        display: none;
+                    }
+                    
+                }
+            }
+            .pass{
+                margin-top: 30px;
+                @include flexCol();
+                label{
+                    margin: 0 20px;
+                }
+                input{
+                    @include inp();
+                    margin: 0 20px;
+                    width: 563px;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                .error{
+                    width: 563px;
+                    height: 21px;
+                    background: #FB4E4E;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    margin: 5px 30px;
+                    color: white;
+                    padding: 0 0 0 5px;
+                    position: absolute;
+                    top: 260px;
+                    left: -10px;
+                    display: none;
+                }
+            }
+            .pass1{
+                .error{
+                    width: 563px;
+                    height: 21px;
+                    background: #FB4E4E;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    margin: 5px 30px;
+                    color: white;
+                    padding: 0 0 0 5px;
+                    position: absolute;
+                    top: 345px;
+                    left: -10px;
+               }
+            }
+            .forgot{
+                margin: 30px 20px 0 20px;
+                @include flexSpace();
+                .remem{
+                    input{
+                        width: 14px;
+                        height: 14px;
+                        border: 0.5px solid #000;
+                    }
+                    label{
+                        color: #696262;
+                        font-size: 16px;
+                    }
+                }
+                label{
+                    color: #696262;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+            .btns{
+                @include flexSpace();
+                margin:10px 20px ;
+                .btn{
+                    cursor: pointer;
+                    width: 255px;
+                    height: 32px;
+                    border-radius: 10px;
+                    background: #FFF;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    @include flexCenter();
+                    input[type="checkbox"]{
+                        -webkit-appearance: none;
+                        appearance: none;
+                        height: 20px;
+                        width: 20px;
+                        background-color: #d5d5d5;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        @include flexCenter();
+                        &::after{
+                            content: '';
+                        font-family: "Font Awesome 5 free";
+                        font-weight: 900;
+                        color: white;
+                        }
+                    }
+                    input[type="checkbox"]:checked{
+                        background-color: #9747FF;
+                    }
+                    span{
+                        margin-left: 8px;
+                    }
+                    
+                }
+            }
+            .butt{
+                @include flexCenter();
+                flex-direction: column;
+                .button{
+                    width: 335px;
+                    height: 32px;
+                    border-radius: 10px;
+                    
+                }
+                #x{
+                    margin: 10px 0 0  0;
+                    background-color: #27397D;
+                    color: white;
+                    border: 1px solid #27397D;
+                    &:hover{
+                        color: #27397D;
+                        background-color: white;
+                        border: 1px solid #27397D;
+                    }
+                }
+                #y{
+                    margin: 10px 0;
+                    color: #27397D;
+                    background-color: white;
+                    border: 1px solid #27397D;
+                    &:hover{
+                        background-color: #27397D;
+                        color: white;
+                        border: 1px solid #27397D;
+                    }
+                }
+                .trouble{
+                    margin: 0 0 20px 0;
+                    .link{
+                        color: #27397D;
+                        text-decoration: none;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .waterMark{
+        position: absolute;
+        top: 500px;
+        left: 0;
+        color: white;
+        display: flex;
+        align-items: center;
+        img{
+            width: 193px;
+            height: 147px;
+        }
+        .detail{
+            .head{
+                font-size: 40px;
+
+            }
+        }
+       }
+}
+@media (max-width:1394px){
+    .sign{
+        .contain{
+            left: 50vw;
+            }
+        }
+}
+@media (max-width:1243px){
+    .sign{
+        .contain{
+            left: 45vw;
+            }
+        }
+}
+@media (max-width:1133px){
+    .sign{
+        .contain{
+            left: 40vw;
+            }
+        }
+        .waterMark{
+            img{
+                width: 153px;
+                height: 107px;
+            }
+            .detail{
+                .body{
+                    width: 220px;
+                }
+            }
+           }
+}
+@media(max-width:1040px){
+    .sign{
+        .contain{
+            left: 20vw;
+            }
+        }
+        .waterMark{
+            img{
+                display: none;
+            }
+            .detail{
+                .body{
+                   display: none;
+                }
+                .head{
+                    display: none;
+                }
+            }
+           }
+}
+@media(max-width:880px){
+    .sign{
+        .contain{
+            left: 10vw;
+            }
+        }
+}
+@media(max-width:743px){
+    .sign{
+        .contain{
+            left: 5vw;
+            }
+        }
+}
+@media(max-width:670px){
+    .sign{
+        .contain{
+            left: 2vw;
+            }
+        }
+}
+@media(max-width:630px){
+    .sign{
+        .contain{
+            width: 550px;
+            .logo{
+                img{
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 80px;
+                }
+            }
+            .login{
+                font-size: 20px;
+            }
+            form{
+                
+                .name{
+                    @include flexCol();
+                    align-items:baseline;
+                    .fName{
+                        @include flexCol();
+                        input{
+                            width: 500px;
+                        }
+                        .error{
+                            width: 500px;
+                        }
+                    }
+                    .phone{
+                        @include flexCol();
+                        input{
+                            width: 500px;
+                        }
+                        .error{
+                            width: 500px;
+                        }
+                        
+                    }
+                }
+                .pass{
+                    margin-top: 30px;
+                    input{
+                        margin: 0 20px;
+                        width: 500px;
+                    }
+                    .error{
+                        width: 500px;
+                    }
+                }
+                .pass1{
+                    .error{
+                        width: 500px;
+                   }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:575px){
+    .sign{
+        .contain{
+            width: 450px;
+            form{
+                .name{
+                    .fName{
+                        @include flexCol();
+                        input{
+                            width: 400px;
+                        }
+                        .error{
+                            width: 400px;
+                        }
+                    }
+                    .phone{
+                        input{
+                            width: 400px;
+                        }
+                        .error{
+                            width: 400px;
+                        }
+                        
+                    }
+                }
+                .pass{
+                    margin-top: 30px;
+                    input{
+                        margin: 0 20px;
+                        width: 400px;
+                    }
+                    .error{
+                        width: 400px;
+                    }
+                }
+                .pass1{
+                    .error{
+                        width: 400px;
+                   }
+                }
+            }
+        }
+    }
+}
+@media(max-width:470px){
+    .sign{
+        .contain{
+            width: 450px;
+            .login{
+                font-size: 20px;
+            }
+            form{
+                .name{
+                    .fName{
+                        input{
+                            width: 400px;
+                        }
+                        .error{
+                            width: 400px;
+                        }
+                    }
+                    .phone{
+                        @include flexCol();
+                        input{
+                            width: 400px;
+                        }
+                        .error{
+                            width: 400px;
+                        }
+                        
+                    }
+                }
+                .pass{
+                    input{
+                        width: 400px;
+                    }
+                    .error{
+                        width: 400px;
+                    }
+                }
+                .pass1{
+                    .error{
+                        width: 400px;
+                   }
+                }
+                .forgot{
+                    @include flexCol();
+                    gap:5px;
+}
+                .btns{
+                    @include flexCol();
+                    gap: 5px;
+                    .btn{
+                        cursor: pointer;
+                        width: 255px;
+                    }
+                }
+                .butt{
+                    @include flexCenter();
+                    flex-direction: column;
+                   }
+            }
+        }
+    }
+}
+@media(max-width:466px){
+    .sign{
+        .contain{
+            width: 300px;
+            .login{
+                font-size: 18px;
+            }
+            form{
+                .name{
+                    margin-top: 5px;
+                    .fName{
+                        label{
+                            
+                            font-size: 16px;
+                        }
+                        input{
+                            width: 250px;
+                        }
+                        .error{
+                            width: 250px;
+                        }
+                    }
+                    .phone{
+                        @include flexCol();
+                        input{
+                            width: 250px;
+                        }
+                        .error{
+                            width: 250px;
+                        }
+                        
+                    }
+                }
+                .pass{
+                    input{
+                        width: 250px;
+                    }
+                    .error{
+                        width: 250px;
+                    }
+                }
+                .pass1{
+                    .error{
+                        width: 250px;
+                   }
+                }
+                .forgot{
+                    @include flexCol();
+                    gap:5px;
+}
+                .btns{
+                    @include flexCol();
+                    gap: 5px;
+                    .btn{
+                        cursor: pointer;
+                        width: 255px;
+                    }
+                }
+                .butt{
+                    @include flexCenter();
+                    flex-direction: column;
+                    .button{
+                        width: 200px;
+                    }
+                   }
+            }
+        }
+    }
+}
