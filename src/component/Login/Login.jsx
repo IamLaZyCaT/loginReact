@@ -19,7 +19,10 @@ const Login = () => {
             {/* form start */}
             <div className="contain">
                 {/* logo in form */}
-                <div className="logo"><img src={logo1} alt="" /></div>
+                <div className="logo">
+                    <img src={logo1} alt="" />
+                    <span>AphroDash</span>
+                    </div>
                 {/* login heading */}
                 <div className="login">Login</div>
 
@@ -43,19 +46,19 @@ const Login = () => {
                         <input type="checkbox" name="" id="" />
                         <label htmlFor="" className='please'>Please remember me</label>
                         </div>
-                        <label htmlFor="">Forgot password ?</label>
+                        <label htmlFor=""><button className='btn'>Forgot password ?</button></label>
                     </div>
 
                     {/* buttons for as bussiness or client */}
                     <div className="btns">
                         <div className="btn">
                             {/* for bussiness */}
-                            <input type="checkbox" name="" id="" />
+                            <input type="radio" name="login" id="" />
                             <span>Login me as Bussiness</span>
                         </div>
                         {/* for client */}
                         <div className="btn">
-                            <input type="checkbox" name="" id="" />
+                            <input type="radio" name="login" id="" />
                             <span>Login me as Client</span>
                         </div>
                     </div>

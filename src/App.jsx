@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Index from './component/Index/Index'
 import Login from './component/Login/Login'
-import Sign from './component/Sign/Sign'
+import Signup from './component/Signup/Signup'
 
 function App() {
   
@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Index/>} />
           <Route path='/login' element={<Login/>} />
-          <Route path='/sign' element={<Sign/>} />
+          <Route path='/signup' element={<Signup/>} />
         </Routes>
       </BrowserRouter>
     </>

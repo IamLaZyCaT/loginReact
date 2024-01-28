@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo-white.png';
 import './Navbar.scss';
 
@@ -12,6 +12,8 @@ const Navbar = () => {
       x.style.display = "block";
     }
   }
+
+  const navigate =useNavigate();
   return (
     <>
     {/* navbar */}
@@ -19,7 +21,7 @@ const Navbar = () => {
 
         {/* logo */}
         <div className="logo">
-            <Link to="#"><img src={logo} alt="" /><span>AphroDash</span></Link>
+            <Link to={navigate('/login')}><img src={logo} alt="" /><span>AphroDash</span></Link>
         </div>
         {/* logo end */}
 

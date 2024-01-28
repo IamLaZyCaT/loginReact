@@ -4,9 +4,9 @@ import bg from '../../assets/bg.jpg';
 import logo1 from '../../assets/logo-white2.png';
 import watermark from '../../assets/watermark.png';
 import Navbar from '../Navbar/Navbar';
-import './Sign.scss';
+import './Signup.scss';
 
-const Sign = () => {
+const Signup = () => {
   return (
     <>
         <Navbar/>
@@ -18,7 +18,10 @@ const Sign = () => {
 {/* form start */}
             <div className="contain">
                 {/* form logo*/}
-                <div className="logo"><img src={logo1} alt="" /></div>
+                <div className="logo">
+                    <img src={logo1} alt="" />
+                    <span>AproDash</span>
+                </div>
 
                 {/* heading */}
                 <div className="login">Sign Up</div>
@@ -70,19 +73,19 @@ const Sign = () => {
                         <input type="checkbox" name="" id="" />
                         <label htmlFor="" className='please'>Please remember me</label>
                         </div>
-                        <label htmlFor="">Read term and condition</label>
+                        <label htmlFor=""><button className='btn'>Read term and condition</button></label>
                     </div>
 
                     {/* buttons for as bussiness or client */}
                     <div className="btns">
                         <div className="btn">
                              {/* for bussiness */}
-                            <input type="checkbox" name="" id="" />
+                            <input type="radio" name="login" id="" />
                             <span>Login me as Bussiness</span>
                         </div>
                         {/* for client */}
                         <div className="btn">
-                            <input type="checkbox" name="" id="" />
+                            <input type="radio" name="login" id="" />
                             <span>Login me as Client</span>
                         </div>
                     </div>
@@ -118,4 +121,4 @@ const Sign = () => {
   )
 }
 
-export default Sign
+export default Signup
