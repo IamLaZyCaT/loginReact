@@ -21,7 +21,7 @@ const Navbar = () => {
 
         {/* logo */}
         <div className="logo">
-            <Link to={navigate('/login')}><img src={logo} alt="" /><span>AphroDash</span></Link>
+            <Link to={'#'}><img src={logo} alt="" /><span>AphroDash</span></Link>
         </div>
         {/* logo end */}
 
@@ -35,7 +35,7 @@ const Navbar = () => {
           </div>
            
             <div className="link1">
-            <li><Link to="" className='link2'><i class="fa-regular fa-user"></i></Link></li>
+            <li><Link to={navigate("/login")} className='link2'><i class="fa-regular fa-user"></i></Link></li>
             <li><Link to="" className='link2'><i class="fa-solid fa-cart-shopping"></i></Link></li>
             </div>
         </ul>

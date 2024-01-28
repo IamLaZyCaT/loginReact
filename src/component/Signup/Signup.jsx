@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import bg from '../../assets/bg.jpg';
 import logo1 from '../../assets/logo-white2.png';
 import watermark from '../../assets/watermark.png';
@@ -7,6 +7,7 @@ import Navbar from '../Navbar/Navbar';
 import './Signup.scss';
 
 const Signup = () => {
+    const navigate = useNavigate();
   return (
     <>
         <Navbar/>
@@ -93,7 +94,7 @@ const Signup = () => {
                      {/* buttons for log in and sign up */}
                     <div className="butt">
                         <button className='button' id='x'>Sign up</button>
-                        <button className='button' id='y'>LogIn</button>
+                        <button className='button' id='y' onClick={()=>{navigate('/login')}}>LogIn</button>
                         <div className="trouble">
                         Having trouble?<Link to="" className='link'> Contact us </Link>
                     </div>
