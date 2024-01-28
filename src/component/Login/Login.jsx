@@ -8,6 +8,9 @@ import './Login.scss';
 
 const Login = () => {
     const navigate=useNavigate();
+    const logone=()=>{
+        alert("you are logged in")
+    }
   return (
     <>
         <Navbar/>
@@ -30,12 +33,12 @@ const Login = () => {
                 <form action="">
                     {/* name form*/}
                     <label htmlFor="">Full Name</label>
-                    <input type="text" name="" id="" placeholder='' className='input' />
+                    <input type="text" name="" id="fname" placeholder='' className='input' />
 
                     {/* password form */}
                     <div className="pass">
                         <label htmlFor="password">Password</label>
-                        <input type="password" name="" id="" placeholder='' className='input'/>
+                        <input type="password" name="" id="password" placeholder='' className='input'/>
 
                         {/* password error */}
                         <div className="error">err</div>
@@ -65,7 +68,7 @@ const Login = () => {
                     </div>
                     {/* buttons for log in and sign up */}
                     <div className="butt">
-                        <button className='button' id='x'>LogIn</button>
+                        <button className='button' id='x' onClick={()=>{logone()}}>LogIn</button>
                         <button className='button' id='y' onClick={()=>{navigate('/signup')}} >Sign up</button>
                         <div className="trouble">
                         Having trouble?<Link to="" className='link'> Contact us </Link>

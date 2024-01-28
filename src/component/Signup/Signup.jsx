@@ -37,7 +37,7 @@ const Signup = () => {
                             <input type="text" name="" id="" className='input'/>
 
                             {/* for name error */}
-                            <div className="error"></div>
+                            <div className="error" id='ferror'></div>
                         </div>
 
                         {/* for phone */}
@@ -46,7 +46,7 @@ const Signup = () => {
                             <input type="text" name="" id="" className='input'/>
 
                             {/* for phone erroe */}
-                            <div className="error"></div>
+                            <div className="error" id='perror'></div>
                         </div>
                     </div>
 
@@ -56,7 +56,7 @@ const Signup = () => {
                         <input type="password" name="" id="" placeholder='' className='input'/>
 
                         {/* Show password error */}
-                        <div className="error"></div>
+                        <div className="error" id='paserror'></div>
                     </div>
 
                     {/*form for password confirm */}
@@ -65,7 +65,7 @@ const Signup = () => {
                         <input type="password" name="" id="" placeholder='' className='input'/>
 
                         {/* show error in confirm password */}
-                        <div className="error"></div>
+                        <div className="error" id='pasCerror'></div>
                     </div>
 
                     {/* remember and forgot password */}
