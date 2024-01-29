@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import bg from '../../assets/bg.jpg';
 import logo1 from '../../assets/logo-white2.png';
@@ -8,9 +8,29 @@ import './Login.scss';
 
 const Login = () => {
     const navigate=useNavigate();
-    const logone=()=>{
-        alert("you are logged in")
-    }
+
+    const [fname,setFname]=useState('');
+    const [password,setPassword]=useState("");
+    const [error,setError]=useState({});
+    // const logone=()=>{
+    //     const newError={};
+    //     if(fname.trim===''){
+    //         newError['fname']="name cannot be empty";
+    //     }
+    //     else{
+    //         if(password.trim===''){
+    //             newError['password']="password cannot be empty";
+    //         }
+    //         else{
+
+    //         }
+    //     }
+        
+    // }
+
+   
+
+
   return (
     <>
         <Navbar/>
@@ -33,12 +53,25 @@ const Login = () => {
                 <form action="">
                     {/* name form*/}
                     <label htmlFor="">Full Name</label>
-                    <input type="text" name="" id="fname" placeholder='' className='input' />
+                    <input type="text" 
+                    name="" 
+                    id="fname" 
+                    placeholder='' 
+                    className='input' 
+                    value={fname}
+                    onChange={(e)=>{setFname(e.target.value)}}/>
 
                     {/* password form */}
                     <div className="pass">
                         <label htmlFor="password">Password</label>
-                        <input type="password" name="" id="password" placeholder='' className='input'/>
+                        <input type="password" 
+                        name="" 
+                        id="password" 
+                        placeholder='' 
+                        className='input'
+                        value={password}
+                        onChange={(e)=>{setPassword(e.target.value)}}
+                        />
 
                         {/* password error */}
                         <div className="error">err</div>
@@ -53,19 +86,17 @@ const Login = () => {
                         <label htmlFor=""><button className='btn'>Forgot password ?</button></label>
                     </div>
 
-                    {/* buttons for as bussiness or client */}
-                    <div className="btns">
-                        <div className="btn">
-                            {/* for bussiness */}
-                            <input type="radio" name="login" id="" />
-                            <span>Login me as Bussiness</span>
-                        </div>
+{/* buttons for as bussiness or client */}
+                    <div className="btnsa">
+                        {/* for bussiness */}
+                        <input type="radio" name="login" id="bussiness" />
+                        <label htmlFor="bussiness">Login me as Bussiness</label>
                         {/* for client */}
-                        <div className="btn">
-                            <input type="radio" name="login" id="" />
-                            <span>Login me as Client</span>
-                        </div>
+                        <input type="radio" name="login" id="client" />
+                        <label htmlFor="client">Login me as Client</label>
+                        
                     </div>
+                    
                     {/* buttons for log in and sign up */}
                     <div className="butt">
                         <button className='button' id='x' onClick={()=>{logone()}}>LogIn</button>

@@ -161,42 +161,43 @@
                             outline: none;
                         }
                     }
+                    :hover{
+                        color: #000;
+                    }
                 }
             }
-            .btns{
-                @include flexSpace();
-                margin:10px 20px ;
-                .btn{
+            
+            .btnsa{
+                @include flexCenter();
+               margin-top: 10px;
+                gap: 20px;
+                input[type="radio"]{
+                    display: none;
+                }
+                label{
                     cursor: pointer;
                     width: 255px;
                     height: 32px;
+                    font-size: 16px;
                     border-radius: 10px;
                     background: #FFF;
                     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
                     @include flexCenter();
-                    input[type="radio"]{
-                        -webkit-appearance: none;
-                        appearance: none;
+                    &::before{
                         height: 20px;
                         width: 20px;
                         background-color: #d5d5d5;
                         border-radius: 50%;
-                        cursor: pointer;
-                        @include flexCenter();
-                        &::after{
-                            content: '';
+                        margin-right: 5px;
+                        content: '';
                         font-family: "Font Awesome 5 free";
                         font-weight: 900;
                         color: white;
-                        }
+                        @include flexCenter();
                     }
-                    input[type="radio"]:checked{
-                        background-color: #9747FF;
-                    }
-                    span{
-                        margin-left: 8px;
-                    }
-                    
+                }
+                input[type="radio"]:checked +  label::before{
+                    background-color: #9747FF;
                 }
             }
             .butt{
@@ -331,13 +332,14 @@
 @media(max-width:670px){
     .sign{
         .contain{
-            left: 2vw;
+            left: 3vw;
             }
         }
 }
 @media(max-width:630px){
     .sign{
         .contain{
+            left: 4vw;
             width: 550px;
             .logo{
                 img{
@@ -394,7 +396,22 @@
                         width: 500px;
                    }
                 }
+                .btnsa{
+                    @include flexSpace();
+                    padding:0 10px;
+                    gap: 10px;
+                    label{
+                        width: 330px;
+                        height: 32px;
+                        &::after{
+                            height: 10px;
+                            width: 10px;
+                        }
+                        
+                    }
+                }
             }
+            
         }
     }
 }
@@ -402,6 +419,7 @@
 @media(max-width:575px){
     .sign{
         .contain{
+            left: 7vw;
             width: 450px;
             form{
                 .name{
@@ -446,6 +464,7 @@
 @media(max-width:470px){
     .sign{
         .contain{
+            left: 5vh;
             width: 450px;
             .login{
                 font-size: 20px;
@@ -488,11 +507,10 @@
                     @include flexCol();
                     gap:5px;
 }
-                .btns{
+                .btnsa{
                     @include flexCol();
-                    gap: 5px;
-                    .btn{
-                        cursor: pointer;
+                    gap: 20px;
+                    label{
                         width: 255px;
                     }
                 }
@@ -554,11 +572,10 @@
                     @include flexCol();
                     gap:5px;
 }
-                .btns{
+                .btnsa{
                     @include flexCol();
-                    gap: 5px;
-                    .btn{
-                        cursor: pointer;
+                    gap: 20px;
+                    label{
                         width: 255px;
                     }
                 }
@@ -570,6 +587,32 @@
                     }
                    }
             }
+        }
+    }
+}
+
+@media(max-width:400px){
+    .sign{
+        .contain{
+           left: 10vw;
+            
+        }
+    }
+}
+
+@media(max-width:368px){
+    .sign{
+        .contain{
+           left: 5vw;
+            
+        }
+    }
+}
+@media(max-width:336px){
+    .sign{
+        .contain{
+           left: 2vw;
+            
         }
     }
 }

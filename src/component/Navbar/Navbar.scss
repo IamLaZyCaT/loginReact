@@ -83,21 +83,22 @@
                 right: 30px;
                 @include flexCol();
                 border: 2px solid white;
-                color: white;
-                background-color: $primary;
+                background-color: white;
+                color: $primary;
                 z-index: 999;
                 li{
                     padding: 10px;
                     
                     .link{
-                        color: white;
+                        color: $primary;
                         &:hover{
                             text-decoration: none;
-                            color: $primary;
+                            color: white;
                         }
                     }
                     &:hover{
-                        background-color: white;
+                        border: 2px solid $primary;
+                        background-color: rgb(114, 104, 104);
                         color: $primary;
                     }
                 }

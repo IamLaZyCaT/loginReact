@@ -97,44 +97,47 @@
                             outline: none;
                         }
                     }
+                    :hover{
+                        color: #000;
+                    }
                 }
             }
-            .btns{
-                @include flexSpace();
-                padding:0 30px;
-                .btn{
+           
+
+            .btnsa{
+                @include flexCenter();
+               
+                gap: 20px;
+                input[type="radio"]{
+                    display: none;
+                }
+                label{
                     cursor: pointer;
                     width: 255px;
                     height: 32px;
+                    font-size: 16px;
                     border-radius: 10px;
                     background: #FFF;
                     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
                     @include flexCenter();
-                    input[type="radio"]{
-                        -webkit-appearance: none;
-                        appearance: none;
+                    &::before{
                         height: 20px;
                         width: 20px;
                         background-color: #d5d5d5;
                         border-radius: 50%;
-                        cursor: pointer;
-                        @include flexCenter();
-                        &::after{
-                            content: '';
+                        margin-right: 5px;
+                        content: '';
                         font-family: "Font Awesome 5 free";
                         font-weight: 900;
                         color: white;
-                        }
+                        @include flexCenter();
                     }
-                    input[type="radio"]:checked{
-                        background-color: #9747FF;
-                    }
-                    span{
-                        margin-left: 8px;
-                    }
-                    
+                }
+                input[type="radio"]:checked +  label::before{
+                    background-color: #9747FF;
                 }
             }
+            
             .butt{
                 @include flexCenter();
                 flex-direction: column;
@@ -146,24 +149,25 @@
                 }
                 #x{
                     margin: 20px 0 0  0;
-                    background-color: #27397D;
-                    color: white;
-                    border: 1px solid #27397D;
+                    color: #27397D;
+                    background-color: white;
+                    border: 2px solid #27397D;
+                    font-weight: bold;
                     &:hover{
-                        color: #27397D;
-                        background-color: white;
-                        border: 1px solid #27397D;
+                        background-color: #27397D;
+                        color: white;
+                        border: 2px solid #27397D;
                     }
                 }
                 #y{
                     margin: 20px 0;
                     color: #27397D;
                     background-color: white;
-                    border: 1px solid #27397D;
+                    border: 2px solid #27397D;
                     &:hover{
                         background-color: #27397D;
                         color: white;
-                        border: 1px solid #27397D;
+                        border: 2px solid #27397D;
                     }
                 }
                 .trouble{
@@ -292,7 +296,7 @@
     .log{
         .contain{
            
-            left: 2vw;
+            left: 3vw;
             
         }
     }
@@ -325,7 +329,7 @@
                     @include flexCol();
                     .error{
                         width: 510px;
-                        height: 21px;       
+                        height: 21px;
                     }
                 }
                 .forgot{
@@ -348,18 +352,16 @@
                         font-weight: 500;
                     }
                 }
-                .btns{
+                .btnsa{
                     @include flexSpace();
                     padding:0 10px;
-                    .btn{
-                        cursor: pointer;
-                        width: 230px;
+                    gap: 10px;
+                    label{
+                        width: 330px;
                         height: 32px;
-                        
-                        input[type="checkbox"]{
+                        &::after{
                             height: 10px;
                             width: 10px;
-
                         }
                         
                     }
@@ -368,7 +370,7 @@
                     @include flexCenter();
                     flex-direction: column;
                     .button{
-                        width: 305px;
+                        width: 250px;
                         height: 32px;
                         border-radius: 10px;
                         
@@ -390,6 +392,7 @@
 @media (max-width:623px){
     .log{
         .contain{
+            left: 5vw;
             width: 500px;
             form{
                 .input{
@@ -404,10 +407,12 @@
                         height: 21px;       
                     }
                 }
-                .btns{
-                    padding:0 20px;
-                    .btn{
-                        width: 200px;
+                .btnsa{
+                    
+                    gap: 10px;
+                    label{
+                        width: 300px;
+                        font-size: 14px;
                     }
                 }
             }
@@ -418,6 +423,7 @@
 @media (max-width:530px){
     .log{
         .contain{
+            left: 6vw;
             width: 400px;
             form{
                 .input{
@@ -437,8 +443,8 @@
                         }
                     }
                 }
-                .btns{
-                    .btn{
+                .btnsa{
+                    label{
                         width: 200px;
                         font-size: 12px;
                     }
@@ -471,10 +477,10 @@
                        
                         @include flexCol();
                     }
-                    .btns{
+                    .btnsa{
                         @include flexCol();
-                        .btn{
-                            margin-top: 10px;
+                        label{
+                            margin: 10px 0;
                         } 
                         }
                     }

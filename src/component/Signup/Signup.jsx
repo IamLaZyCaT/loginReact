@@ -77,18 +77,15 @@ const Signup = () => {
                         <label htmlFor=""><button className='btn'>Read term and condition</button></label>
                     </div>
 
-                    {/* buttons for as bussiness or client */}
-                    <div className="btns">
-                        <div className="btn">
-                             {/* for bussiness */}
-                            <input type="radio" name="login" id="" />
-                            <span>Login me as Bussiness</span>
-                        </div>
+                 {/* buttons for as bussiness or client  */}
+                    <div className="btnsa">
+                        {/* for bussiness */}
+                        <input type="radio" name="login" id="bussiness" />
+                        <label htmlFor="bussiness">Login me as Bussiness</label>
                         {/* for client */}
-                        <div className="btn">
-                            <input type="radio" name="login" id="" />
-                            <span>Login me as Client</span>
-                        </div>
+                        <input type="radio" name="login" id="client" />
+                        <label htmlFor="client">Login me as Client</label>
+                        
                     </div>
 
                      {/* buttons for log in and sign up */}
