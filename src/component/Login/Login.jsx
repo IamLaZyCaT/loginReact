@@ -1,39 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import bg from '../../assets/bg.jpg';
 import logo1 from '../../assets/logo-white2.png';
 import watermark from '../../assets/watermark.png';
-import Navbar from '../Navbar/Navbar';
+import Nav from '../Nav/Nav';
 import './Login.scss';
 
 const Login = () => {
     const navigate=useNavigate();
 
-    const [fname,setFname]=useState('');
-    const [password,setPassword]=useState("");
-    const [error,setError]=useState({});
-    // const logone=()=>{
-    //     const newError={};
-    //     if(fname.trim===''){
-    //         newError['fname']="name cannot be empty";
-    //     }
-    //     else{
-    //         if(password.trim===''){
-    //             newError['password']="password cannot be empty";
-    //         }
-    //         else{
-
-    //         }
-    //     }
-        
-    // }
-
-   
-
-
+    const logone=()=>{
+        alert('you are logeed')
+    }
   return (
     <>
-        <Navbar/>
+        {/* <Navbar/> */}
+        <Nav/>
        
         <div className="log">
 
@@ -58,8 +40,7 @@ const Login = () => {
                     id="fname" 
                     placeholder='' 
                     className='input' 
-                    value={fname}
-                    onChange={(e)=>{setFname(e.target.value)}}/>
+                    />
 
                     {/* password form */}
                     <div className="pass">
@@ -69,8 +50,7 @@ const Login = () => {
                         id="password" 
                         placeholder='' 
                         className='input'
-                        value={password}
-                        onChange={(e)=>{setPassword(e.target.value)}}
+                       
                         />
 
                         {/* password error */}

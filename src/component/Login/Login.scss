@@ -14,18 +14,17 @@
         background-color: white;
         width: 605px;
         .logo{
+            @include flexCenter();
             img{
                 width: 50px;
                 height: 50px;
-                margin: 0 100px;
+                margin: 0;
             }
             span{
                 color: #081D6A;
                 font-size: 20px;
                 font-weight: 400;
-                position: absolute;
-                top: 15px;
-                left: 153px;
+                margin: 0;
             }
         }
         .login{
@@ -149,14 +148,14 @@
                 }
                 #x{
                     margin: 20px 0 0  0;
-                    color: #27397D;
-                    background-color: white;
+                    color: white;
+                    background-color: #27397D;
                     border: 2px solid #27397D;
                     font-weight: bold;
                     &:hover{
-                        background-color: #27397D;
+                        background-color: #355ee7;
                         color: white;
-                        border: 2px solid #27397D;
+                        border: 2px solid #355ee7;
                     }
                 }
                 #y{
@@ -172,7 +171,7 @@
                 }
                 .trouble{
                     margin: 0 0 20px 0;
-                    color: #696262;
+                    color: #c5b3b3;
                     cursor: default;
                     .link{
                         color: #27397D;

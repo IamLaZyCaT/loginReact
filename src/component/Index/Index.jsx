@@ -1,13 +1,14 @@
 import React from 'react';
 import logo1 from '../../assets/logo-blue.png';
-import Navbar from '../Navbar/Navbar';
+import Nav from '../Nav/Nav';
 import './Index.scss';
 
 const Index = () => {
   return (
     <>
     {/* navbar */}
-        <Navbar/>
+        {/* <Navbar/> */}
+        <Nav/>
         
         <div className="container">
 

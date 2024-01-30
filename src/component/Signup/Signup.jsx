@@ -3,14 +3,15 @@ import { Link, useNavigate } from 'react-router-dom';
 import bg from '../../assets/bg.jpg';
 import logo1 from '../../assets/logo-white2.png';
 import watermark from '../../assets/watermark.png';
-import Navbar from '../Navbar/Navbar';
+import Nav from '../Nav/Nav';
 import './Signup.scss';
 
 const Signup = () => {
     const navigate = useNavigate();
   return (
     <>
-        <Navbar/>
+        {/* <Navbar/> */}
+        <Nav/>
 
         <div className="sign">
             {/* background image */}
