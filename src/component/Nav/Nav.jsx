@@ -18,13 +18,18 @@ const Nav = () => {
     }
   return (
     <>
+    {/* navbar */}
         <div className="navbar">
+            {/* logo */}
             <div className="nav-brand">
                 <Link to={navigate('/')} className='logo'>
                     <img src={logo} alt="" id="logo"/>
                     <label htmlFor="logo">AproDash</label>
                 </Link>
             </div>
+            {/* logo end*/}
+
+            {/* nav-list for big screen */}
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
@@ -33,6 +38,8 @@ const Nav = () => {
                 <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
                
             </ul>
+
+{/* nav-list for small screen */}
             <div className='toogle'>
                 <ul>
                 <div type="button" id="burgermenu" className='button' onClick={myClick}>
@@ -43,6 +50,7 @@ const Nav = () => {
                 </ul>
             </div>
         </div>
+        {/* nav-list for small toggle screen */}
         <div className="navbar-toogle" id='navbar-toogle'>
             <ul>
             <li><a href="">Home</a></li>

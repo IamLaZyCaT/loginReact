@@ -25,6 +25,7 @@
                 font-size: 20px;
                 font-weight: 400;
                 margin: 0;
+                cursor: default;
             }
         }
         .login{
@@ -34,6 +35,7 @@
             @include flexCenter();
             padding: 5px 0;
             font-size: 32px;
+            cursor: default;
         }
         form{
             @include flexCol();
